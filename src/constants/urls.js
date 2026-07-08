@@ -14,9 +14,17 @@ export const URLs = {
   githubProfile: `https://github.com/${githubUsername}`,
 };
 
-// Web3Forms (https://web3forms.com) — free, no backend required. Access key is meant to be public;
-// it's rate-limited and domain-scoped on Web3Forms' side, not a secret.
+// This is a static, client-only site — anything shipped here is visible in devtools/view-source
+// no matter how it's encoded. The obfuscation below only stops a plain-text grep/GitHub-code-search
+// hit on the raw key; it is NOT a substitute for server-side enforcement. The real protection is the
+// "Restrict Domain" setting on this access key in the Web3Forms dashboard, which makes Web3Forms
+// reject submissions whose Origin/Referer isn't vinaysomawat.github.io.
+export const ALLOWED_HOSTNAMES = ["vinaysomawat.github.io", "localhost", "127.0.0.1"];
+export const isAllowedHost = () => ALLOWED_HOSTNAMES.includes(window.location.hostname);
+
 export const CONTACT_FORM_ENDPOINT = "https://api.web3forms.com/submit";
-export const WEB3FORMS_ACCESS_KEY = "04de7bfe-4646-41a5-bf54-d09e42b81582";
+
+const REVERSED_B64_ACCESS_KEY = "ygTNxgjYyQTZ5ADZtQTNmJWL1EWM00iN0YDNtUmZidTZkRDM";
+export const WEB3FORMS_ACCESS_KEY = atob(REVERSED_B64_ACCESS_KEY.split("").reverse().join(""));
 
 export const RESUME_URL = "./assets/resume.pdf"; // TODO: add resume.pdf to /assets

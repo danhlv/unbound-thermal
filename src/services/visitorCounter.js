@@ -8,12 +8,13 @@ import {
   updateDoc,
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
 import { firebaseConfig } from "../constants/firebase.js";
+import { isAllowedHost } from "../constants/urls.js";
 
 const SESSION_KEY = "portfolio-visited";
 
 export async function initVisitorCounter() {
   const visitorCount = document.getElementById("visitorCount");
-  if (!visitorCount) return;
+  if (!visitorCount || !isAllowedHost()) return;
 
   const app = initializeApp(firebaseConfig);
   getAnalytics(app);

@@ -1,7 +1,7 @@
 import { html } from "https://unpkg.com/lit-html?module";
 import { mount } from "../utils/dom.js";
 import { contact } from "../../user-data/data.js";
-import { CONTACT_FORM_ENDPOINT, WEB3FORMS_ACCESS_KEY } from "../constants/urls.js";
+import { CONTACT_FORM_ENDPOINT, WEB3FORMS_ACCESS_KEY, isAllowedHost } from "../constants/urls.js";
 
 const contactLink = (item) => html`
   <li>
@@ -115,7 +115,7 @@ export function initContactForm() {
     const [name, email, subject, message] = inputs.map((input) => input.value.trim());
 
     try {
-      if (CONTACT_FORM_ENDPOINT) {
+      if (CONTACT_FORM_ENDPOINT && isAllowedHost()) {
         const res = await fetch(CONTACT_FORM_ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -130,8 +130,8 @@ export function initContactForm() {
         const data = await res.json();
         if (!res.ok || !data.success) throw new Error("submission failed");
       } else {
-        // No form backend configured yet — hand off to the visitor's mail client instead
-        // of silently pretending a submission succeeded.
+        // No form backend configured, or the page isn't running on the allowed host — hand off to
+        // the visitor's mail client instead of silently pretending a submission succeeded.
         const mailtoSubject = encodeURIComponent(subject);
         const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
         window.location.href = `mailto:vinaysomawat40@gmail.com?subject=${mailtoSubject}&body=${body}`;

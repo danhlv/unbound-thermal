@@ -13,6 +13,7 @@ import { mountGithub, repoListTemplate } from "./components/github.js";
 import { mountBlog, blogListTemplate } from "./components/blog.js";
 import { mountAdventures } from "./components/adventures.js";
 import { mountContact, initContactForm } from "./components/contact.js";
+import { mountCoffee } from "./components/coffee.js";
 import { mountFooter } from "./components/footer.js";
 
 import { initNavScroll } from "./services/nav-scroll.js";
@@ -61,6 +62,7 @@ function mountStaticSections() {
   mountBlog();
   mountAdventures();
   mountContact();
+  mountCoffee();
   mountFooter();
 }
 

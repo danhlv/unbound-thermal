@@ -12,6 +12,7 @@ export const URLs = {
   gitRepo: gitRepos(githubUsername),
   gitContributionGraph: gitContributionGraph(githubUsername),
   githubProfile: `https://github.com/${githubUsername}`,
+  buyMeACoffee: "https://buymeacoffee.com/r194dme8y/c/19242327",
 };
 
 // This is a static, client-only site — anything shipped here is visible in devtools/view-source

@@ -20,7 +20,7 @@
 }
 
 .section {
-  padding-block: var(--space-9);
+  padding-block: var(--space-8);
   position: relative;
 }
 
@@ -276,7 +276,7 @@
 
 @media (max-width: 720px) {
   .section {
-    padding-block: var(--space-8);
+    padding-block: var(--space-7);
   }
 }
 

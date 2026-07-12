@@ -28,4 +28,4 @@ export const CONTACT_FORM_ENDPOINT = "https://api.web3forms.com/submit";
 const REVERSED_B64_ACCESS_KEY = "ygTNxgjYyQTZ5ADZtQTNmJWL1EWM00iN0YDNtUmZidTZkRDM";
 export const WEB3FORMS_ACCESS_KEY = atob(REVERSED_B64_ACCESS_KEY.split("").reverse().join(""));
 
-export const RESUME_URL = "./assets/resume.pdf"; // TODO: add resume.pdf to /assets
+export const RESUME_URL = "./assets/resume.pdf";

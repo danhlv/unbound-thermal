@@ -5,6 +5,7 @@ const NAV_LINKS = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
   { id: "github", label: "GitHub" },
   { id: "blog", label: "Blog" },
   { id: "adventures", label: "Adventures" },

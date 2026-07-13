@@ -9,6 +9,7 @@ import { mountHero } from "./components/hero.js";
 import { mountAbout } from "./components/about.js";
 import { mountExperience } from "./components/experience.js";
 import { mountSkills } from "./components/skills.js";
+import { mountProjects } from "./components/projects.js";
 import { mountGithub, repoListTemplate } from "./components/github.js";
 import { mountBlog, blogListTemplate } from "./components/blog.js";
 import { mountAdventures } from "./components/adventures.js";
@@ -58,6 +59,7 @@ function mountStaticSections() {
   mountAbout();
   mountExperience();
   mountSkills();
+  mountProjects();
   mountGithub();
   mountBlog();
   mountAdventures();

@@ -21,6 +21,18 @@ export const skills = [
   "OpenAI",
 ];
 
+export const projects = [
+  {
+    title: "Vinay AI OS",
+    description:
+      "A personal AI Operating System — Next.js + Supabase + Claude, with a per-module Telegram bot, that runs one person's tasks, career, finances, health, learning, and coding practice through a single daily Life Score.",
+    tags: ["Next.js", "Supabase", "Claude", "TypeScript", "Telegram Bot"],
+    repo: "https://github.com/vinaysomawat/vinay-ai-os",
+    demo: "https://vinay-ai-os.vercel.app",
+    icon: "fa-solid fa-robot",
+  },
+];
+
 export const experience = [
   {
     title: "SS&C Technologies",

@@ -6,6 +6,7 @@ const COMMANDS = [
   { label: "About", target: "about", icon: "fa-solid fa-user", meta: "Section" },
   { label: "Work Experience", target: "experience", icon: "fa-solid fa-briefcase", meta: "Section" },
   { label: "Skills", target: "skills", icon: "fa-solid fa-code", meta: "Section" },
+  { label: "Projects", target: "projects", icon: "fa-solid fa-diagram-project", meta: "Section" },
   { label: "GitHub & Repositories", target: "github", icon: "fa-solid fa-code-branch", meta: "Section" },
   { label: "Blog", target: "blog", icon: "fa-solid fa-pen", meta: "Section" },
   { label: "Adventures", target: "adventures", icon: "fa-solid fa-mountain-sun", meta: "Section" },

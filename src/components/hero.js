@@ -58,6 +58,7 @@ const heroTemplate = () => html`
           <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
+      <p class="hero-resume-updated" data-reveal>Resume updated Jul 2026</p>
     </div>
 
     <div class="hero-visual" data-reveal>

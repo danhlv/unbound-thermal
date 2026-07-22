@@ -120,6 +120,12 @@
   margin-top: var(--space-7);
 }
 
+.hero-resume-updated {
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
 /* Visual: orbiting tech badges around a central core */
 .hero-visual {
   position: relative;

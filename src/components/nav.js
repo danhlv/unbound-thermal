@@ -3,12 +3,8 @@ import { mount } from "../utils/dom.js";
 
 const NAV_LINKS = [
   { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "skills", label: "Skills" },
+  { id: "skills", label: "Capabilities" },
   { id: "projects", label: "Projects" },
-  { id: "github", label: "GitHub" },
-  { id: "blog", label: "Blog" },
-  { id: "adventures", label: "Adventures" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -27,8 +23,8 @@ const linkItem = (link, mobile = false) => html`
 const navTemplate = () => html`
   <header class="site-nav glass" id="siteNav">
     <div class="container nav-inner">
-      <a href="#hero" class="nav-logo underline-link" aria-label="Vinay Somawat — back to top">
-        Vinay<span class="gradient-text">.</span>
+      <a href="#hero" class="nav-logo underline-link" aria-label="Thermal Design & Simulation — back to top">
+        Thermal<span class="gradient-text">.</span>
       </a>
 
       <nav class="nav-links" aria-label="Primary">

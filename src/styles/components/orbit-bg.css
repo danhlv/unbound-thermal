@@ -1,0 +1,25 @@
+/* Animated orbital background canvas */
+#orbitBg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep content above the canvas */
+main,
+.site-nav,
+.back-to-top,
+#footer,
+#command-palette-root,
+.scroll-progress {
+  position: relative;
+  z-index: 1;
+}
+
+/* The space scene is a dark-mode visual; watermark it in light theme */
+html[data-theme="light"] #orbitBg {
+  opacity: 0.12;
+}

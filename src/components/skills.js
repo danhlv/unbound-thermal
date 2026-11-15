@@ -3,13 +3,27 @@ import { mount } from "../utils/dom.js";
 import { skills } from "../../user-data/data.js";
 
 // Display-only grouping layered on top of the flat `skills` list in user-data/data.js
-// (kept flat there so the JSON generator tool's multi-select keeps working).
 const CATEGORIES = [
-  { category: "Languages & Frameworks", icon: "fa-solid fa-code", match: ["TypeScript", "Angular", "React", "Signals"] },
-  { category: "State & Data", icon: "fa-solid fa-diagram-project", match: ["RxJS", "NgRx", "NGXS", "WebSockets"] },
-  { category: "Architecture", icon: "fa-solid fa-layer-group", match: ["Nx", "Microfrontends", "Module Federation"] },
-  { category: "Tooling & Quality", icon: "fa-solid fa-vial", match: ["Storybook", "Playwright"] },
-  { category: "AI", icon: "fa-solid fa-robot", match: ["OpenAI"] },
+  {
+    category: "Thermal & Fluids",
+    icon: "fa-solid fa-temperature-high",
+    match: ["Conjugate Heat Transfer", "Regenerative Cooling", "Conduction & Convection", "Radiation", "Two-Phase Flow", "Electronics Cooling"],
+  },
+  {
+    category: "CFD & Simulation",
+    icon: "fa-solid fa-wind",
+    match: ["ANSYS Fluent", "OpenFOAM", "RANS", "LES", "Wind-Tunnel Correlation"],
+  },
+  {
+    category: "Design & Optimization",
+    icon: "fa-solid fa-gears",
+    match: ["Parametric Sweeps", "Gaussian-Process Surrogates", "Bayesian Optimization", "NXOpen Automation"],
+  },
+  {
+    category: "Data & Assurance",
+    icon: "fa-solid fa-robot",
+    match: ["Python", "ML Pipelines", "Uncertainty Quantification", "V&V"],
+  },
 ];
 
 function groupSkills() {
@@ -33,7 +47,7 @@ const skillGroup = (group, index) => html`
       <h3>${group.category}</h3>
     </div>
     <ul class="skill-chip-list">
-      ${group.items.map((item) => html`<li class="chip skill-chip">${item}</li>`)}
+      ${group.items.map((item) => html`<li class="chip">${item}</li>`)}
     </ul>
   </div>
 `;
@@ -41,16 +55,15 @@ const skillGroup = (group, index) => html`
 const skillsTemplate = () => html`
   <div class="container">
     <div class="section-heading">
-      <p class="section-eyebrow" data-reveal>Toolbox</p>
+      <p class="section-eyebrow" data-reveal>Capabilities</p>
       <h2 class="section-title" id="skills-title" data-reveal>
-        Skills & <span class="gradient-text">Technologies</span>
+        What we <span class="gradient-text">do</span>.
       </h2>
       <p class="section-subtitle" data-reveal>
-        The stack I reach for to turn ambiguous requirements into fast, resilient
-        interfaces.
+        Physics-first simulation, accelerated by modern data-science methods.
       </p>
     </div>
-    <div class="skill-grid">
+    <div class="skills-grid">
       ${groupSkills().map((group, i) => skillGroup(group, i))}
     </div>
   </div>

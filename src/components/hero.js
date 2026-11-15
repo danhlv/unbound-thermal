@@ -1,13 +1,12 @@
 import { html } from "https://unpkg.com/lit-html?module";
 import { mount } from "../utils/dom.js";
-import { RESUME_URL } from "../constants/urls.js";
 
 const FLOATING_BADGES = [
-  { label: "TypeScript", icon: "fa-brands fa-square-js", pos: "badge-1" },
-  { label: "Angular", icon: "fa-brands fa-angular", pos: "badge-2" },
-  { label: "React", icon: "fa-brands fa-react", pos: "badge-3" },
-  { label: "Nx Monorepo", icon: "fa-solid fa-diagram-project", pos: "badge-4" },
-  { label: "OpenAI", icon: "fa-solid fa-robot", pos: "badge-5" },
+  { label: "CFD", icon: "fa-solid fa-wind", pos: "badge-1" },
+  { label: "Heat Transfer", icon: "fa-solid fa-temperature-high", pos: "badge-2" },
+  { label: "Surrogate Models", icon: "fa-solid fa-chart-line", pos: "badge-3" },
+  { label: "Design Optimization", icon: "fa-solid fa-gears", pos: "badge-4" },
+  { label: "V&V + UQ", icon: "fa-solid fa-check-double", pos: "badge-5" },
 ];
 
 const badgeTemplate = (badge) => html`
@@ -29,42 +28,39 @@ const heroTemplate = () => html`
     <div class="hero-copy">
       <p class="hero-eyebrow" data-reveal>
         <span class="hero-status-dot"></span>
-        Open to interesting problems
+        Now taking projects
       </p>
       <h1 class="hero-title" data-reveal>
-        Vinay Somawat
+        Thermal Design<br />& Simulation
       </h1>
-      <p class="hero-role gradient-text-animated" data-reveal>Senior Frontend Engineer</p>
+      <p class="hero-role gradient-text-animated" data-reveal>
+        CFD &middot; Heat Transfer &middot; Data-Driven Design
+      </p>
       <p class="hero-description" data-reveal>
-        I build scalable web applications, design systems, AI-powered developer
-        experiences, and high-performance user interfaces — with Angular, React,
-        and TypeScript at the core.
+        We design, analyze, and optimize thermal systems — from regenerative
+        cooling channels to electronics thermal management — combining
+        high-fidelity simulation with ML-driven design sweeps and rigorous
+        verification.
       </p>
       <div class="hero-cta-row" data-reveal>
-        <a
-          class="btn btn-primary magnetic ripple"
-          href="${RESUME_URL}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
-          Resume
+        <a class="btn btn-primary magnetic ripple" href="#projects">
+          <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+          See Our Work
         </a>
-        <a class="btn btn-secondary magnetic ripple" href="#experience">
-          View Work
+        <a class="btn btn-secondary magnetic ripple" href="#skills">
+          Services
         </a>
         <a class="btn btn-ghost underline-link magnetic" href="#contact">
           Contact
           <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
-      <p class="hero-resume-updated" data-reveal>Resume updated Jul 2026</p>
     </div>
 
     <div class="hero-visual" data-reveal>
       <div class="hero-orbit">
         <div class="hero-orbit-core glass">
-          <i class="fa-solid fa-code" aria-hidden="true"></i>
+          <i class="fa-solid fa-rocket" aria-hidden="true"></i>
         </div>
         ${FLOATING_BADGES.map((badge) => badgeTemplate(badge))}
       </div>

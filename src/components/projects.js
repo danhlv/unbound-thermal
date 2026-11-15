@@ -32,9 +32,9 @@ const projectsTemplate = () => html`
     <div class="section-heading">
       <p class="section-eyebrow" data-reveal>Featured Work</p>
       <h2 class="section-title" id="projects-title" data-reveal>
-        Side <span class="gradient-text">Projects</span>
+        Representative <span class="gradient-text">Projects</span>
       </h2>
-      <p class="section-subtitle" data-reveal>Things I've built and shipped outside of day-job work.</p>
+      <p class="section-subtitle" data-reveal>Selected thermal design and simulation work.</p>
     </div>
     <div class="project-grid">
       ${projects.map((item, i) => projectCard(item, i))}

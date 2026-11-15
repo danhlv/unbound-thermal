@@ -1,7 +1,7 @@
 import { html } from "https://unpkg.com/lit-html?module";
 import { mount } from "../utils/dom.js";
 import { contact } from "../../user-data/data.js";
-import { CONTACT_FORM_ENDPOINT, WEB3FORMS_ACCESS_KEY, isAllowedHost } from "../constants/urls.js";
+import { CONTACT_EMAIL } from "../constants/urls.js";
 
 const contactLink = (item) => html`
   <li>
@@ -24,11 +24,11 @@ const contactTemplate = () => html`
     <div class="contact-copy">
       <p class="section-eyebrow" data-reveal>Contact</p>
       <h2 class="section-title" id="contact-title" data-reveal>
-        Let's build something <span class="gradient-text">worth shipping</span>.
+        Let's solve your <span class="gradient-text">thermal challenge</span>.
       </h2>
       <p class="section-subtitle" data-reveal>
-        Pick the channel that fits best — tech discussions, collaborations,
-        project feedback, or just a quick hello.
+        Tell us about your project — thermal analysis, design sweeps,
+        simulation automation, or something else entirely.
       </p>
       <ul class="contact-link-list" data-reveal>
         ${contact.map((item) => contactLink(item))}
@@ -115,32 +115,15 @@ export function initContactForm() {
     const [name, email, subject, message] = inputs.map((input) => input.value.trim());
 
     try {
-      if (CONTACT_FORM_ENDPOINT && isAllowedHost()) {
-        const res = await fetch(CONTACT_FORM_ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            subject: `Portfolio contact: ${subject}`,
-            name,
-            email,
-            message,
-          }),
-        });
-        const data = await res.json();
-        if (!res.ok || !data.success) throw new Error("submission failed");
-      } else {
-        // No form backend configured, or the page isn't running on the allowed host — hand off to
-        // the visitor's mail client instead of silently pretending a submission succeeded.
-        const mailtoSubject = encodeURIComponent(subject);
-        const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-        window.location.href = `mailto:vinaysomawat40@gmail.com?subject=${mailtoSubject}&body=${body}`;
-      }
+      // Static site with no form backend — hand off to the visitor's mail client.
+      const mailtoSubject = encodeURIComponent(subject);
+      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${mailtoSubject}&body=${body}`;
       form.classList.add("is-success");
-      status.textContent = "Thanks — your message is on its way.";
+      status.textContent = "Thanks — your mail client should open with the message ready to send.";
       form.reset();
     } catch {
-      status.textContent = "Something went wrong. Please email me directly instead.";
+      status.textContent = `Something went wrong. Please email us directly at ${CONTACT_EMAIL}.`;
     } finally {
       submitBtn.classList.remove("is-loading");
       submitBtn.disabled = false;

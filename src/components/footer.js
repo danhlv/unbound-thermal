@@ -7,7 +7,7 @@ const copyrightText = footer.find((item) => item.label === "copyright-text")?.da
 const footerTemplate = () => html`
   <div class="container footer-inner">
     <div class="footer-brand">
-      <p class="footer-logo">Vinay<span class="gradient-text">.</span></p>
+      <p class="footer-logo">Thermal<span class="gradient-text">.</span></p>
       <p class="footer-tagline">${copyrightText}</p>
     </div>
 
@@ -24,11 +24,7 @@ const footerTemplate = () => html`
     </ul>
 
     <div class="footer-meta">
-      <p class="footer-visitors">
-        <span class="visitor-label">Visitors</span>
-        <span id="visitorCount" class="visitor-number">—</span>
-      </p>
-      <p class="footer-flex">Hand-built with vanilla JS + lit-html. No frameworks.</p>
+      <p class="footer-flex">Based on the MIT-licensed vinaysomawat portfolio template.</p>
     </div>
   </div>
 `;

@@ -7,7 +7,7 @@ const copyrightText = footer.find((item) => item.label === "copyright-text")?.da
 const footerTemplate = () => html`
   <div class="container footer-inner">
     <div class="footer-brand">
-      <p class="footer-logo">Thermal<span class="gradient-text">.</span></p>
+      <p class="footer-logo">Unbound Thermal<span class="gradient-text">.</span></p>
       <p class="footer-tagline">${copyrightText}</p>
     </div>
 

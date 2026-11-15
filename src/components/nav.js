@@ -23,8 +23,8 @@ const linkItem = (link, mobile = false) => html`
 const navTemplate = () => html`
   <header class="site-nav glass" id="siteNav">
     <div class="container nav-inner">
-      <a href="#hero" class="nav-logo underline-link" aria-label="Thermal Design & Simulation — back to top">
-        Thermal<span class="gradient-text">.</span>
+      <a href="#hero" class="nav-logo underline-link" aria-label="Unbound Thermal — back to top">
+        Unbound<span class="gradient-text">.</span>
       </a>
 
       <nav class="nav-links" aria-label="Primary">

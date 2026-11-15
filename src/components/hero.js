@@ -31,10 +31,10 @@ const heroTemplate = () => html`
         Now taking projects
       </p>
       <h1 class="hero-title" data-reveal>
-        Thermal Design<br />& Simulation
+        Unbound Thermal
       </h1>
       <p class="hero-role gradient-text-animated" data-reveal>
-        CFD &middot; Heat Transfer &middot; Data-Driven Design
+        Thermal Design & Simulation
       </p>
       <p class="hero-description" data-reveal>
         We design, analyze, and optimize thermal systems — from regenerative

@@ -1,7 +1,7 @@
-# Thermal Design & Simulation — Projects
+# Unbound Thermal — Projects
 
-A static showcase site for thermal design, CFD, and data-driven simulation
-services. Live at **https://danhlv.github.io/thermal-projects/**
+A static showcase site for **Unbound Thermal**: thermal design, CFD, and
+data-driven simulation services. Live at **https://danhlv.github.io/thermal-projects/**
 
 ## Stack
 
@@ -34,4 +34,4 @@ The orbital background animation is an original implementation for this site.
 ## License
 
 Code from the template is MIT-licensed (see `LICENSE`). Site content and the
-orbital animation are © 2026 the site owners.
+orbital animation are © 2026 Unbound Thermal.

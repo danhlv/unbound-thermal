@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://danhlv.github.io/thermal-projects/sitemap.xml
+Sitemap: https://danhlv.github.io/unbound-thermal/sitemap.xml

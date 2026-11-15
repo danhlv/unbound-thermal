@@ -1,7 +1,7 @@
 # Unbound Thermal — Projects
 
 A static showcase site for **Unbound Thermal**: thermal design, CFD, and
-data-driven simulation services. Live at **https://danhlv.github.io/thermal-projects/**
+data-driven simulation services. Live at **https://danhlv.github.io/unbound-thermal/**
 
 ## Stack
 
